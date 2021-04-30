@@ -1,20 +1,66 @@
 <!DOCTYPE html>
+<!-- 둔치의 개발이야기 https://dunchi.tistory.com/92 -->
 <!-- <> 태그 : 시작태그, 종료태그 <> </> -->
 <html lang="en">
     <head>
         <meta charset="UTF-8">
 
-        <title>Document</title>
+        <title>타이틀</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
     </head>
-    <body>
-        <h1>제목</h1>
+    <!-- style 속성 : css를 적용할 때 사용
+        속성값으로 css 문법을 사용 -->
+    <body style="background-color: yellow;">
+        <h1 style="background-color: green;">제목</h1>
         <p>해당 내용을 작성합니다.</p>
-        <h2>제목</h2>
+        <h2 style="background-color: red;">제목</h2>
         <h3>제목</h3>
-        <h4>제목</h4>
-        <h5>제목</h5>
+        <h4 style="color: blue;">제목</h4>
+        <h5 style="font-family: 'Times New Roman', Times, serif;">제목</h5>
         <h6>제목</h6>
         <!-- 주석 -->
-        
+        <!-- 링크태그 : a
+            href 속성(attribute)을 사용 
+            속성값에 주소 값을 작성 -->
+        <a href="https://daum.net" target="_blank">링크내용</a>
+
+        <!-- 구글 폰트 적용 -->
+        <h1 style="font-family: 'Nanum Brush Script', cursive;">구글 폰트 적용한 내용</h1>
+
+        <!-- 글자 편집을 위한 다양한 태그 -->
+        <b>글자가</b>
+        <strong>나오는 모양</strong>
+        <i>이 어떤지</i>
+        <small>확인을</small>
+        <del>해보시기</del>
+        <sub>바랍니다</sub>
+        <sup>!!!</sup>
+
+        <!-- 색 표현 -->
+        <h2 style="background-color: red;">빨간색</h2>
+        <h2 style="background-color: rgb(255,0,0);">빨간색</h2>
+        <h2 style="background-color: rgba(255,0,0,0.5);">빨간색</h2>
+        <!-- 16진수
+        10진수 : 0~9
+        2진수 : 0(false), 1(true)
+        16진수 : 0~9, a~f -->
+        <h2 style="background-color: #ff0000;">빨간색</h2>
+        <!-- 00~ff(255) -->
+
+        <!-- 이미지 삽입 
+            src 속성값 : 그림경로 -->
+        <img src="../images/kakao.jpg" style="width: 200px; height: 150px;">
+        <!-- img width height alt 속성-->
+        <img src="../images/kakao.jp" width="500" height="400" alt="라이언">
+
+        <!-- 이미지를 링크로 활용하기 
+            target 속성에 _blank : 새창 -->
+        <a href="https://google.com" target="_blank">
+            <img src="../images/googlelogo.png">
+        </a>
+
+
+
     </body>
 </html>
