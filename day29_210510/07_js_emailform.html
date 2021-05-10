@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test(){
+            document.getElementById('email').value = document.getElementById('emailselect').value;
+        }
+    </script>
+</head>
+<body>
+    이메일 : <input type="text" id="id"> @ <input type="text" id="email">
+    <select id="emailselect" onchange="test()">
+        <option value="" selected>선택하세요</option>
+        <option value="naver.com">naver.com</option>
+        <option value="gmail.com">gmail.com</option>
+        <option value="hanmail.net">hanmail.net</option>
+        <option value="yahoo.co.kr">yahoo.co.kr</option>
+        <option value="">직접입력</option>
+    </select> 
+</body>
+</html>

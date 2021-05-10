@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, tr, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td {
+            width: 30px;
+            text-align: right;
+        }
+        tr:nth-child(even) {
+            background-color: chocolate;
+        }
+    </style>
+    <script>
+        function multiple() {
+            var tablePrint = '<table>';
+            for (var i=2;i<10;i++){                
+                tablePrint += "<tr>";
+                tablePrint += '<td>' +i+'단</td>';
+                for (var j=1;j<10;j++){
+                    tablePrint += '<td>'+ i*j +'</td>';
+                }
+                tablePrint += '</tr>';
+            }
+            tablePrint += '</table>';
+            document.getElementById('result').innerHTML = tablePrint;
+        }
+    </script>
+</head>
+<body>
+    <button onclick='multiple()'>구구단출력</button>
+    <div id='result'></div>
+    <div style='color: red;'>
+        구구단 출력 버튼 클릭하면 구구단이 출력됨.<br>
+        javascript와 innerHTML을 이용하여 구구단을 만들어보세요.<br>
+        이 구구단은 table태그로 작성한 것입니다.<br>
+        숫자를 모두 만들고 나중에 css도 적용해봅시다.
+    </div>
+</body>
+</html>
