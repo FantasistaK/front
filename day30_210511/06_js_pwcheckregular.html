@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pwdRegular() {
+            var exp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!#$-])[a-zA-Z!#$-]{8,18}$/;
+            var pwd = document.getElementById('pwd').value;
+            var result = document.getElementById('result1');
+            if(pwd.length>0){
+                if(pwd.match(exp)){
+                    result.style.color = 'green';
+                    result.innerHTML = '유효한 password 형식입니다.';
+                } else {
+                    result.style.color = 'red';
+                    result.innerHTML = '8~18글자 영문 소문자, 대문자, 특수기호(!#$-)를 사용해주세요';
+                }
+            } else {
+                result.style.color = 'red';
+                result.innerHTML = "필수 정보입니다."
+            }
+        }
+        function pwdCheck() {
+            var pwd = document.getElementById('pwd');
+            var pwdCheck = document.getElementById('pwdCheck');
+            var result = document.getElementById('result2');
+            if(pwd.value==pwdCheck.value){
+                result.style.color = 'green';
+                result.innerHTML = '일치합니다';
+            } else {
+                result.style.color = 'red';
+                result.innerHTML = "일치하지 않습니다";
+            }
+        }
+    </script>
+    <style>
+        input{
+            width: 300px;
+        }
+    </style>
+
+</head>
+<body>
+    비밀번호 : <input type="text" id="pwd" onblur="pwdRegular()" placeholder="비밀번호를 입력하세요"><br>
+    <span id="result1"></span><br>
+    비밀번호확인 : <input type="text" id="pwdCheck" onblur="pwdCheck()" placeholder="비밀번호를 한번 더 입력하세요"><br>
+    <span id="result2"></span><br>
+</body>
+</html>

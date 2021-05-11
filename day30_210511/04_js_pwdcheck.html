@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pwdCheck() {
+            var pwd = document.getElementById('pwd');
+            var pwdCheck = document.getElementById('pwdCheck');
+            var result = document.getElementById('result');
+            if(pwd.value==pwdCheck.value){
+                result.style.color = 'green';
+                result.innerHTML = '비밀번호 일치';
+            } else {
+                result.style.color = 'red';
+                result.innerHTML = "비밀번호 불일치";
+            }
+        }
+    </script>
+    <style>
+        input {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    비밀번호: <input type="password" id="pwd" placeholder="비밀번호를 입력하세요"><br>
+    비밀번호확인: <input type="password" id="pwdCheck" placeholder="비밀번호를 한번 더 입력하세요" onkeyup="pwdCheck()"><br>
+    <div id="result"></div>
+</body>
+</html>

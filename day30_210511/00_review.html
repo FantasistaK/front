@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1() {
+            // DOM : document.get Element~~
+            console.log(document.getElementById('id1'));
+            console.log(document.getElementById('id2'));
+            console.log(document.getElementById('id1').innerHTML);
+            console.log(document.getElementById('id2').innerHTML);
+            console.log(document.getElementById('id1').value);
+            console.log(document.getElementById('id2').value);
+            
+            var ele = document.getElementById('id1');
+            console.log(ele);
+            console.log(ele.value);
+            var ele1 = document.getElementById('id3');
+            // 좌변 : id3 입력 값
+            // 우변 : id1 입력 값
+            // id1에 입력한 값을 id3의 value로 지정함
+            ele1.value = ele.value;
+
+            var ele2 = document.getElementById('id2');
+            // id1에 입력한 값을 id2의 innerHTML로 표현
+            ele2.innerHTML = ele.value;
+        }
+    </script>
+</head>
+<body>
+    input 입력 : <input type="text" id="id1"><br>
+    두번째 input : <input type="text" id="id3"><br>
+    <h2 id="id2">h2태그내용</h2>
+    <button onclick="test1()">함수호출</button>
+</body>
+</html>
