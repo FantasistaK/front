@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            display: none;
+        }
+        #div1 {
+            background-color: red;
+        }
+        #div2 {
+            background-color: green;
+        }
+        #div3 {
+            background-color: blue;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(5000);
+            });
+            $("#btn2").click(function(){
+                $("#div1").fadeOut();
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeOut(3000);
+            });
+            $("#btn3").click(function(){
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(3000);
+            });
+            $("#btn4").click(function(){
+                // opacity 투명도
+                $("#div1").fadeTo("slow", 0.1);
+                $("#div2").fadeTo("slow", 0.5);
+                $("#div3").fadeTo("slow", 1.0);
+            });
+            $("#btn5").click(function(){
+                $("#div1").slideToggle("slow");
+                $("#div2").slideToggle();
+                $("#div3").slideToggle("fast");
+            });
+        });
+    </script>
+</head>
+<body>
+    
+    <button id="btn1">fadeIn</button>
+    <button id="btn2">fadeOut</button>
+    <button id="btn3">fadeToggle</button>
+    <button id="btn4">fadeTo</button>
+    <button id="btn5">slideToggle</button>
+    
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                var a = $("#id1").text();
+                console.log(a);
+            });
+            $("#btn2").click(function(){
+                var b = $("#id1").html();
+                console.log(b);
+                var c = document.getElementById('id1').innerHTML;
+                console.log(c);
+            });
+            $("#btn3").click(function(){
+                // id1 영역의 html 내용을 변경함.
+                // $("#id1").html("이 내용이 어디에 나오는지 보세요");
+                // $("#id1").html("이 내용이 <b>어디에 나오는지</b> 보세요");
+                var d = "이렇게도 <b>쓸수가</b> 있습니다";
+                $("#id1").html(d);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="id1">오늘은 <b>수요일</b>입니다.</p>
+    <button id="btn1">text</button>
+    <button id="btn2">html</button>
+    <button id="btn3">html 변경</button>
+</body>
+</html>

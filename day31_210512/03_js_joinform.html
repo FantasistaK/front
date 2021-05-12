@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- js파일 import -->
+    <script src="../js/joinform.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <!-- css파일 import -->
+    <link rel="stylesheet" href="../css/joinform.css">
+</head>
+<body>
+    <!-- js 폴더 만들어서 joinform.js 파일 만들기 -->
+    <!-- css 폴더 만들어서 joinform.css 파일 만들기 -->
+    아이디(*) : <input type="text" id="id" onblur="idcheck()" placeholder="아이디는 6~10자리, 소문자, 숫자 포함입니다" style="width: 400px;"><br>
+    <span id="idCheckResult"></span><br>
+    비밀번호(*) : <input type="text" id="pwd" onblur="pwdcheck()" placeholder="비밀번호는 8~16자리, 대 소문자, 특수문자, 숫자 포함입니다" style="width: 400px;"><br>
+    <span id="pwdCheckResult"></span><br>
+    비밀번호확인 : <input type="text" id="pwdConfirm" onblur="pwdconfirm()" style="width: 400px;"><br>
+    <span id="pwdConfirmResult"></span><br>
+    이름(*) : <input type="text" id="name" onblur="namecheck()"><br>
+    <span id="nameCheckResult"></span><br>
+    이메일 : <input type="text" id="emailId"> @ <input type="text" id="domain">
+    <select id="domainSelect" onchange="domainselect(this.value)">
+        <option value="" selected>직접입력</option>
+        <option value="naver.com">naver.com</option>
+        <option value="gmail.com">gmail.com</option>
+        <option value="hanmail.net">hanmail.net</option>
+    </select><br><br>
+    전화번호 : <input type="text" id="phone" onblur="phonecheck()"><br>
+    <span id="phoneCheckResult"></span><br>
+    집주소 : 
+    <!-- 다음 주소 API 활용 -->
+    <input type="text" id="sample4_postcode" placeholder="우편번호">
+    <input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
+    <input type="text" id="sample4_roadAddress" placeholder="도로명주소">
+    <input type="text" id="sample4_jibunAddress" placeholder="지번주소">
+    <span id="guide" style="color:#999;display:none"></span>
+    <input type="text" id="sample4_detailAddress" placeholder="상세주소">
+    <input type="text" id="sample4_extraAddress" placeholder="참고항목">
+</body>
+</html>

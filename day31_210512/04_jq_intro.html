@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-latest.js"></script> -->
+
+    <script>
+        $(document).ready(function(){
+            // id1인 요소를 클릭했을 때 함수 호출
+            $("#id1").click(function(){
+                alert('id1을 클릭하셨네요')
+            });
+            // class1인 요소를 클릭했을 때 함수 호출
+            $(".class1").click(function(){
+                console.log('class1 클릭');
+            });
+            // btn1을 클릭했을때 class1 을 사라지게
+            $("#btn1").click(function(){
+                $(".class1").hide();
+            });
+            // btn2를 클릭했을때 class1 을 나타나게
+            $("#btn2").click(function(){
+                $(".class1").show();
+            });
+            // btn3을 클릭했을 때 id1 색을 빨간색으로
+            $("#btn3").click(function(){
+                $("#id1").css("background-color", "red");
+            });
+        })
+    </script>
+</head>
+<body>
+    <!-- jQuery : javascript 라이브러리
+        바닐라 자바스크립트 -->
+    <h2 id="id1">내용1</h2>
+    <h3 class="class1">내용2</h3>
+    <button id="btn1">사라짐</button>
+    <button id="btn2">나타남</button>
+    <button id="btn3">색깔변경</button>
+
+    <script>
+        // 자바스크립트로 id1을 클릭했을 때 test1 이라는 함수 호출하기
+        var id1 = document.getElementById('id1');
+        id1.addEventListener("click", test1);
+        function test1() {
+            console.log('test1 함수 호출됨');
+        }
+    </script>
+</body>
+</html>
